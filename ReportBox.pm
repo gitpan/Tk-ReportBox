@@ -3,7 +3,7 @@ package ReportBox;
 use strict;
 use warnings;
 
-our $VERSION = '1.0';
+our $VERSION = '1.01';
 require Tk::Toplevel;
 our @ISA = qw(Tk::Toplevel);
 
@@ -118,7 +118,7 @@ sub Populate
 			'-headers' => ['PASSIVE'],
 			'-file' => ['PASSIVE'],
 			'-button' => ['PASSIVE'],
-			'-title' => ['PASSIVE'],
+			#'-title' => ['PASSIVE'],
 			'-deliver' => ['METHOD'],
 			'-mode' => ['PASSIVE'],
 			DEFAULT => [$text]);
@@ -196,8 +196,7 @@ Defaults to 2.
 
 -mode: this is 0 for static report and 1 for editable report. Defaults to 0.
 
--title: this is for the title of the ReportBox. Dont know how to make it
-work
+-title: this is for the title of the ReportBox.
 
 
 Methods:
@@ -227,6 +226,10 @@ Kenneth Gonsalves.
 I welcome all comments, suggestions and flames to 
 
 lawgon@thenilgiris.com
+
+=head1 LICENSE
+
+Same as perl
 
 =head1 BUGS
 

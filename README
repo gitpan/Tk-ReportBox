@@ -12,6 +12,8 @@ SYNOPSIS
                                     );
 
             my $result = $reportbox->deliver();
+        
+            The '-file' option is mandatory.
 
 DESCRIPTION
     This widget is meant for display of reports. In certain applications,
@@ -29,6 +31,8 @@ DESCRIPTION
 
     Options:
 
+    ******** The '-file' option is mandatory. *******************
+
     -startdir: The start directory to be passed to FileSelect. Defaults to
     './'.
 
@@ -43,6 +47,8 @@ DESCRIPTION
 
     -mode: this is 0 for static report and 1 for editable report. Defaults
     to 0.
+
+    -title: this is for the title of the ReportBox.
 
     Methods:
 
@@ -67,6 +73,9 @@ AUTHOR
     I welcome all comments, suggestions and flames to
 
     lawgon@thenilgiris.com
+
+LICENSE
+    Same as perl
 
 BUGS
     Must be any number crawling around - havent found any though.
