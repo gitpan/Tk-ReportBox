@@ -5,4 +5,5 @@ Makefile.PL
 ReportBox.pm
 example.pl
 test.rp
+test.pl
 

@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Tk;
-use ReportBox;
+use Tk::ReportBox;
 use strict;
 my $main = MainWindow->new(-title => 'ReportBox Demo');
 my ($tmp,$l4,$l1);

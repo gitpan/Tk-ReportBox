@@ -3,7 +3,7 @@ package ReportBox;
 use strict;
 use warnings;
 
-our $VERSION = '1.01';
+our $VERSION = '1.02';
 require Tk::Toplevel;
 our @ISA = qw(Tk::Toplevel);
 
@@ -19,7 +19,6 @@ sub Populate
 	my ($main, $args) = @_;
 	my $text;
 	my $file = $args->{'-file'};
-	#my $title = $args->{'-title'};
 	my $mode = $args->{'-mode'};
 	my $headers = $args->{'-headers'};
 	$headers = 2 unless $headers;
@@ -27,7 +26,6 @@ sub Populate
 	$startdir = './' unless $startdir;
 	my $printstr = $args->{'-printstr'};
 	$printstr = "lp $file" unless $printstr;
-	$main->{'-button'} = 0;
 	$main->SUPER::Populate($args);
 	open (F,$file);
 	$mode = 0 unless $mode;
@@ -118,18 +116,15 @@ sub Populate
 			'-headers' => ['PASSIVE'],
 			'-file' => ['PASSIVE'],
 			'-button' => ['PASSIVE'],
-			#'-title' => ['PASSIVE'],
 			'-deliver' => ['METHOD'],
 			'-mode' => ['PASSIVE'],
 			DEFAULT => [$text]);
 	$main->Advertise('list' => $text);
-
-
-
 }#end of sub populate
 sub deliver
 	{
 	my ($main,$temp) = @_;
+	$main->waitVariable(\$main->{'-button'});
 	if ($main->{'-button'})
 		{
 		my $list = $main->Subwidget('list');
@@ -227,7 +222,7 @@ I welcome all comments, suggestions and flames to
 
 lawgon@thenilgiris.com
 
-=head1 LICENSE
+=head1 LICENCE
 
 Same as perl
 
