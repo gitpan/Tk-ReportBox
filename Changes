@@ -1,0 +1,6 @@
+Revision history for Perl extension Tk::ReportBox.
+
+0.01  Sat Jun 28 15:04:34 2003
+	- original version; created by h2xs 1.20 with options
+		-AX -n Tk::ReportBox
+
